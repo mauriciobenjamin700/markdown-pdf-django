@@ -1,0 +1,5 @@
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="markdown_file" required placeholder="Selecione o arquivo Markdown (.md)">
+    <button type="submit">Converter e baixar PDF</button>
+</form>
