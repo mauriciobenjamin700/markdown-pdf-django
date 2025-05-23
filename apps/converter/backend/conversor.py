@@ -85,7 +85,6 @@ def markdown_to_pdf(
     # Gerar PDF
     try:
         HTML(string=full_html, base_url=base_path).write_pdf(pdf_file_path)
-        print(f"PDF gerado com sucesso: {pdf_file_path}")
     except Exception as e:
         print(f"Erro ao gerar PDF: {e}")
 

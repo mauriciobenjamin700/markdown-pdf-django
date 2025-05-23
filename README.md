@@ -11,7 +11,7 @@ Este projeto é uma aplicação Django que permite converter arquivos Markdown e
 
 ## Estrutura do Projeto
 
-```
+```bash
 apps/
   converter/
     backend/

@@ -1,5 +1,20 @@
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input type="file" name="markdown_file" required placeholder="Selecione o arquivo Markdown (.md)">
-    <button type="submit">Converter e baixar PDF</button>
-</form>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Converter Markdown para PDF</title>
+    <link rel="stylesheet" href="../../static/converter/styles.css"> 
+    <!-- href="{% static 'converter/style.css' %}" -->
+</head>
+<body>
+    <div class="center-box">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="markdown_file" required placeholder="Selecione o arquivo Markdown (.md)" accept=".md" >
+            <input type="text" name="output_name" required placeholder="Nome para o arquivo PDF">
+            <button type="submit">Converter e baixar PDF</button>
+        </form>
+    </div>
+</body>
+</html>
