@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Converter Markdown para PDF</title>
+    <link rel="stylesheet" href="../../static/converter/styles.css"> 
+    <!-- href="{% static 'converter/style.css' %}" -->
+</head>
+<body>
+    <div class="center-box">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="zip_file" accept=".zip" required>
+        <input type="text" name="output_name" placeholder="Nome do PDF" required>
+        <button type="submit">Converter para PDF</button>
+        <p class="info">Selecione um arquivo ZIP contendo um Markdown (.md) para converter em PDF.</p>
+        <p class="info">O nome do PDF será usado para o arquivo convertido.</p>
+        <a href="/">Converter somente um markdown</a>
+    </form>
+    </div>
+</body>
+</html>
